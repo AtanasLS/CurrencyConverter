@@ -13,4 +13,14 @@ services:
     ports:
       - 5432:5432
 
+  flyway:
+    image: flyway/flyway
+    command: migrate
+    volumes:
+      - ./db:/flyway/sql
+      - ./db:/flyway/conf
+    depends_on:
+      - app-database
+
+
  
