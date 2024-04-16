@@ -24,7 +24,7 @@ namespace infrastructure.repositories
             target_curr as {nameof(History.TargetCurrency)},
             value_curr as {nameof(History.ValueCurrency)},
             result as {nameof(History.Result)}
-            FROM test.history"); 
+            FROM public.history");
         }
 
         public History CreateHistory(History history)
@@ -35,7 +35,7 @@ namespace infrastructure.repositories
                  targetCurr = history.TargetCurrency, valueCurr = history.ValueCurrency, result = history.Result};
 
             return conn.QueryFirst<History>(@$"
-            insert into test.history (date_created, source_curr, target_curr, value_curr, result)
+            insert into public.history (date_created, source_curr, target_curr, value_curr, result)
             values (@dateCreated, @sourceCurr, @targetCurr, @valueCurr, @result)
             RETURNING
             id as {nameof(History.Id)},

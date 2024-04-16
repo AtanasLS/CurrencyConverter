@@ -17,9 +17,6 @@ namespace api.transferModels.HistoryDto
         public string? TargetCurrency { get; set; }
         [Required, NotNull]
         public int ValueCurrency { get; set; }
-        [Required, NotNull]
-        public decimal Result { get; set; }
-
 
     }
 }

@@ -11,7 +11,7 @@ namespace infrastructure.models
         public DateTime DateCreated { get; set; }
         public string? SourceCurrency { get; set; }
         public string? TargetCurrency { get; set; }
-        public int ValueCurrency { get; set; }
+        public decimal ValueCurrency { get; set; }
         public decimal Result { get; set; }
     }
 }
