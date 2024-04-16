@@ -10,3 +10,4 @@ C:\Users\Atanas Stoyanov\OneDrive - Erhvervsakademi Sydvest\Dokumenter\GitHub\De
 C:\Users\Atanas Stoyanov\OneDrive - Erhvervsakademi Sydvest\Dokumenter\GitHub\DevOps\CurrencyConverter\infrastructure\obj\Debug\net8.0\refint\infrastructure.dll
 C:\Users\Atanas Stoyanov\OneDrive - Erhvervsakademi Sydvest\Dokumenter\GitHub\DevOps\CurrencyConverter\infrastructure\obj\Debug\net8.0\infrastructure.pdb
 C:\Users\Atanas Stoyanov\OneDrive - Erhvervsakademi Sydvest\Dokumenter\GitHub\DevOps\CurrencyConverter\infrastructure\obj\Debug\net8.0\ref\infrastructure.dll
+C:\Users\Atanas Stoyanov\OneDrive - Erhvervsakademi Sydvest\Dokumenter\GitHub\DevOps\CurrencyConverter\infrastructure\obj\Debug\net8.0\infrastructure.csproj.AssemblyReference.cache

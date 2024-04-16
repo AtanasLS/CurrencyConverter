@@ -36,3 +36,6 @@ C:\Users\Atanas Stoyanov\OneDrive - Erhvervsakademi Sydvest\Dokumenter\GitHub\De
 C:\Users\Atanas Stoyanov\OneDrive - Erhvervsakademi Sydvest\Dokumenter\GitHub\DevOps\CurrencyConverter\api\obj\Debug\net8.0\api.pdb
 C:\Users\Atanas Stoyanov\OneDrive - Erhvervsakademi Sydvest\Dokumenter\GitHub\DevOps\CurrencyConverter\api\obj\Debug\net8.0\api.genruntimeconfig.cache
 C:\Users\Atanas Stoyanov\OneDrive - Erhvervsakademi Sydvest\Dokumenter\GitHub\DevOps\CurrencyConverter\api\obj\Debug\net8.0\ref\api.dll
+C:\Users\Atanas Stoyanov\OneDrive - Erhvervsakademi Sydvest\Dokumenter\GitHub\DevOps\CurrencyConverter\api\bin\Debug\net8.0\Dapper.dll
+C:\Users\Atanas Stoyanov\OneDrive - Erhvervsakademi Sydvest\Dokumenter\GitHub\DevOps\CurrencyConverter\api\bin\Debug\net8.0\Npgsql.dll
+C:\Users\Atanas Stoyanov\OneDrive - Erhvervsakademi Sydvest\Dokumenter\GitHub\DevOps\CurrencyConverter\api\bin\Debug\net8.0\Npgsql.DependencyInjection.dll
