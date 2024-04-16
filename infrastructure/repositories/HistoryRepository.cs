@@ -37,8 +37,14 @@ namespace infrastructure.repositories
             return conn.QueryFirst<History>(@$"
             insert into test.history (date_created, source_curr, target_curr, value_curr, result)
             values (@dateCreated, @sourceCurr, @targetCurr, @valueCurr, @result)
-            RETURNING *;
-            ", paramaters);
+            RETURNING
+            id as {nameof(History.Id)},
+            date_created as {nameof(History.DateCreated)},
+            source_curr as {nameof(History.SourceCurrency)},
+            target_curr as {nameof(History.TargetCurrency)},
+            value_curr as {nameof(History.ValueCurrency)},
+            result as {nameof(History.Result)}
+            ;", paramaters);
         }
 
     }
