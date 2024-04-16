@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "+pt13dTccztocn8zol64UJwHN4xaf7/d2RO8a9u87T1sbXt+WbRXjT+o+1/k5pGEBJD5hA4ecfKhl4PZiVfsrQ==",
+  "dgSpecHash": "iwi9K8zIok9CevIzGgqZhqtUBIQ9GCkEC4k+fAUWCDe4Z60SCL+WFmCS1RVFaPOiHJ4q0hUoH7OBOVpCU6mOeQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Atanas Stoyanov\\OneDrive - Erhvervsakademi Sydvest\\Dokumenter\\GitHub\\DevOps\\CurrencyConverter\\infrastructure\\infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Atanas Stoyanov\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
+    "C:\\Users\\Atanas Stoyanov\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Atanas Stoyanov\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Atanas Stoyanov\\.nuget\\packages\\npgsql\\8.0.2\\npgsql.8.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,8 +1,8 @@
-CREATE TABLE "CurrencyConverted".test.History(
+CREATE TABLE "CurrencyConverted"."public".History(
     id SERIAL PRIMARY KEY,
     date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     source_curr VARCHAR(50),
     target_curr VARCHAR(50),
-    value_curr INTEGER,
+    value_curr NUMERIC (18, 2),
     result NUMERIC(18, 2)
 );
