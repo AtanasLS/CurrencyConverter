@@ -1,6 +1,5 @@
 using infrastructure;
 using infrastructure.repositories;
-using Npgsql;
 using service;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +11,7 @@ if (builder.Environment.IsDevelopment())
         dataSourceBuilder => dataSourceBuilder.EnableParameterLogging());
 }
 
+builder.Services.AddNpgsqlDataSource(Utilities.connectionString);
 
 
 builder.Services.AddSingleton<HistoryService>();
