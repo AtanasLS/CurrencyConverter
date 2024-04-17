@@ -22,7 +22,7 @@ services:
     depends_on:
       - app-database
   currency-conversion-api:
-    build: .
+    image: atanasls/currency-converter-api
     depends_on:
       - app-database
     ports:

@@ -1,12 +1,14 @@
 using System.ComponentModel.DataAnnotations;
 using infrastructure.models;
 using infrastructure.repositories;
+using Microsoft.Extensions.Logging;
 
 namespace service
 {
     public class HistoryService
     {
         private readonly HistoryRepository _repository;
+        private readonly ILogger<HistoryService> _logger;
 
         Dictionary<string, decimal> rates = new Dictionary<string, decimal>
             {
@@ -17,9 +19,10 @@ namespace service
                 {"AUD", 1.31m}
             };
 
-        public HistoryService(HistoryRepository repository)
+        public HistoryService(HistoryRepository repository, ILogger<HistoryService> logger)
         {
             _repository = repository;
+            _logger = logger;
         }
 
         public IEnumerable<History> GetAllHistories()
@@ -28,8 +31,9 @@ namespace service
             {
                 return _repository.GetAllHistory();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "An error occurred while getting all histories.");
                 throw new Exception("Could not get all the courses!");
             }
         }
