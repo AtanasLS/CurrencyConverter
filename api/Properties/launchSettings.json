@@ -37,5 +37,14 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
+  },
+  "ApiForDocker": {
+    "commandName": "Project",
+    "launchBrowser": true,
+    "launchUrl": "api/values",
+    "applicationUrl": "https://localhost:8888;http://localhost:8888",
+    "environmentVariables": {
+      "ASPNETCORE_ENVIRONMENT": "Development"
+    }
   }
 }

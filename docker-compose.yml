@@ -21,6 +21,13 @@ services:
       - ./db:/flyway/conf
     depends_on:
       - app-database
+  currency-conversion-api:
+    build: .
+    depends_on:
+      - app-database
+    ports:
+      - "8888:8080"
+  
 
 
  
