@@ -1,8 +1,8 @@
 export interface History {
-        id: number;
-        dateCreated: Date;
-        sourceCurrency: string | null;
-        targetCurrency: string | null;
+        id: number | null;
+        dateCreated: Date | null;
+        sourceCurrency: string;
+        targetCurrency: string;
         valueCurrency: number;
-        result: number;
+        result: number | null;
 }
