@@ -12,7 +12,7 @@ export class HistoryService {
   constructor(private http: HttpClient) { }
 
   createNewHistory(sourceCurrency: string, targetCurrency: string, valueCurrency: number){
-    return this.http.post<History>(this.baseURL + "createCurrency", {
+    return this.http.post<History>(this.baseURL + 'createCurrency', {
         id: 0,
         dateCreated: null,
         sourceCurrency: sourceCurrency,

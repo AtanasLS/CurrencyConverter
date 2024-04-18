@@ -4,5 +4,5 @@ export interface History {
     sourceCurrency: string;
     targetCurrency: string;
     valueCurrency: number;
-    result: number | null;
+    result?: number | null;
 }
