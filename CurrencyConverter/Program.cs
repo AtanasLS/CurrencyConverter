@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CurrencyConverter
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -37,7 +37,7 @@ namespace CurrencyConverter
             Console.WriteLine($"{amount} {fromCurrency} is {convertedAmount} {toCurrency}.");
         }
 
-        static decimal ConvertCurrency(decimal amount, string fromCurrency, string toCurrency, Dictionary<string, decimal> rates)
+       public static decimal ConvertCurrency(decimal amount, string fromCurrency, string toCurrency, Dictionary<string, decimal> rates)
         {
             decimal rateToUSD = rates[fromCurrency];
             decimal amountInUSD = amount / rateToUSD;
