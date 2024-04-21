@@ -3,6 +3,16 @@ type: docker
 name: integration
  
 steps:
+    - name: docker build
+      image: docker/compose
+      commands:
+        - docker-compose build
+
+    - name: docker test
+      image: docker/compose
+      commands:
+        - docker-compose run --rm test
+
     - name: build
       image: mcr.microsoft.com/dotnet/sdk
       commands:
