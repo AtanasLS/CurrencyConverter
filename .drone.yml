@@ -4,12 +4,12 @@ name: integration
  
 steps:
     - name: docker-compose-up
-    image: docker/compose:1.25.0-rc2-alpine
-    commands:
-    - docker-compose -f docker-compose.yml up -d
-    volumes:
-    - name: dockersock
-      path: /var/run/docker.sock
+      image: docker/compose:1.25.0-rc2-alpine
+      commands:
+      - docker-compose -f docker-compose.yml up -d
+      volumes:
+      - name: dockersock
+        path: /var/run/docker.sock
       
     - name: build
       image: mcr.microsoft.com/dotnet/sdk
