@@ -1,7 +1,7 @@
 kind: pipeline
 type: docker
 name: integration
- 
+
 steps:
     - name: build
       image: docker/compose
@@ -16,7 +16,7 @@ steps:
         - /var/run/docker.sock:/var/run/docker.sock  # Mount Docker socket into the container
       commands:
         - docker-compose run --rm test
-        
+
     - name: build
       image: mcr.microsoft.com/dotnet/sdk
       commands:
