@@ -11,7 +11,7 @@ namespace Test
     {
         public static readonly NpgsqlDataSource dataSource;
         public static readonly string testConnectionString 
-                                = "Server=localhost:5432;Database=CurrencyConverted;User Id=appuser;Password=secret;";
+                                = "Server=database:5432;Database=CurrencyConverted;User Id=appuser;Password=secret;";
     
     static Helper()
     {
