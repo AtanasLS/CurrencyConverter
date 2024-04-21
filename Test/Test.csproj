@@ -12,10 +12,14 @@
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="Npgsql" Version="8.0.2" />
     <PackageReference Include="NUnit" Version="4.1.0" />
     <PackageReference Include="NUnit.Analyzers" Version="3.9.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
     <ProjectReference Include="..\CurrencyConverter\CurrencyConverter.csproj" />
+    <ProjectReference Include="..\api\api.csproj" />
+    <ProjectReference Include="..\service\service.csproj" />
+    <ProjectReference Include="..\infrastructure\infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
