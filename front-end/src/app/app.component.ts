@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HistoryService } from './history.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { HistoryService } from './history.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'front-end';
   
   historyResponse: any;
@@ -14,8 +14,16 @@ export class AppComponent {
   fromCurrency: string = 'USD';
   toCurrency: string = 'JPY';
   result: number = 0; 
+  all: any[] = [];
+  previousConversions: any[] = [];
+
 
   constructor(private historyService: HistoryService) {}
+
+
+  ngOnInit(): void {
+    this.getPreviousConversions();
+  }
 
   convertCurrency() {
     this.historyService.createNewHistory(this.fromCurrency, this.toCurrency, this.amount).subscribe(
@@ -26,6 +34,19 @@ export class AppComponent {
       },
       (error) => {
         console.error('Error saving history:', error);
+      }
+    );
+  }
+  getPreviousConversions() {
+    this.historyService.getPreviousConversions().subscribe(
+      (response: any) => {
+        this.previousConversions = response.responseData;
+        this.all = this.previousConversions;
+
+        console.log('Here are the previousCurrencies: ',this.all);
+      },
+      (error: any) => {
+        console.error('Error with getting the previous conversions:', error);
       }
     );
   }
