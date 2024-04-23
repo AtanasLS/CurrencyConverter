@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../environment/environment';
+import { Observable, catchError, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,13 @@ export class HistoryService {
         targetCurrency: targetCurrency,
         valueCurrency: valueCurrency,
         result: 0
-    });
-}
+    }); 
+  }
+  getPreviousConversions() : Observable<any[]>{
+    return this.http.get<any[]>(this.baseURL + 'currency').pipe(
+      catchError((error: any) => {
+        console.error('An error occurred:', error);
+        return throwError(error); 
+      })
+    );  }
 }

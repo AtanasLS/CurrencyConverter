@@ -34,4 +34,28 @@
   <div class="result">
       <p>Converted Amount: <span id="convertedAmount" >{{result}}</span></p>
   </div>
+  <div>
+    <table class="currency-table">
+        <thead class="table-columns">
+          <tr>
+            <th>Date Created</th>
+            <th>Source Currency</th>
+            <th>Target Currency</th>
+            <th>Value Currency</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let conversion of previousConversions">
+              <td>{{conversion.dateCreated | date}}</td>
+              <td>{{conversion.sourceCurrency}}</td>
+              <td>{{conversion.targetCurrency}}</td>
+              <td>{{conversion.valueCurrency}}</td>
+              <td>{{conversion.result}}</td>
+            </tr>
+        
+        </tbody>
+      </table>
+  </div>
+ 
 </div>

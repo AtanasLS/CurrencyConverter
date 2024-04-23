@@ -37,3 +37,42 @@
 
     justify-content: center;
 }
+.currency-table {
+    // Container for the table should be block, not flex
+    width: 100%; // Adjust as needed
+  
+    
+      width: 100%; // Adjust as needed
+      margin: auto; // Center the table
+  
+      th {
+        text-align: center; // Center align the text in the header and cells
+        padding: 8px; // Adjust padding as needed
+      }
+  
+      thead {
+        background-color: #3498db; // Adjust the color as needed
+        color: #ffffff;
+  
+        th {
+          font-size: 30px; // Adjust font size as needed
+        }
+      }
+  
+      tbody {
+        tr {
+            td {
+                text-align: center;
+                vertical-align: middle;
+               }
+          &:nth-child(odd) {
+            background-color: #f2f2f2; // Adjust the color for odd rows
+          }
+          &:nth-child(even) {
+            background-color: #396af2; // Adjust the color for even rows
+          }
+        }
+      }
+    
+  }
+  
