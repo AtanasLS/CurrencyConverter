@@ -1,0 +1,7 @@
+services:
+  currency-converter-api:
+    image: atanasls/currency-converter-api:latest
+  
+  frontend:
+    image: atanasls/front-end-currency-final:latest
+  
