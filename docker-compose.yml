@@ -21,12 +21,22 @@ services:
       - ./db:/flyway/conf
     depends_on:
       - app-database
+
+  frontend:
+    image: atanasls/front-end-currency-final 
+    depends_on:
+      - currency-conversion-api
+    ports:
+      - 4201:4200
+
   currency-conversion-api:
     image: atanasls/currency-converter-api
     depends_on:
       - app-database
     ports:
       - "8888:8080"
+    
+  
   
 
 
