@@ -23,7 +23,7 @@ services:
       - app-database
 
   frontend:
-    image: atanasls/front-end-currency-final:latest
+    image: atanasls/front-end-currency-final
     depends_on:
       - currency-conversion-api
     ports:
