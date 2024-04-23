@@ -6,7 +6,7 @@ steps:
     - name: code-analysis
       image: boulundeasv/dotnet-sdk-with-java
       enviorment:
-        SONARSECRET:
+        SONAR_TOKEN:
           from_secret: SONAR_TOKEN
       commands:
         - dotnet sonarscanner begin
