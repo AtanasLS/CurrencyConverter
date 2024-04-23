@@ -16,7 +16,7 @@ namespace api.transferModels.HistoryDto
         [MinLength(3), MaxLength(40)]
         public string? TargetCurrency { get; set; }
         [Required, NotNull]
-        public int ValueCurrency { get; set; }
+        public decimal ValueCurrency { get; set; }
 
     }
 }
