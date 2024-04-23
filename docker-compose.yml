@@ -28,13 +28,30 @@ services:
       - currency-conversion-api
     ports:
       - 4201:4200
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
 
   currency-conversion-api:
     image: atanasls/currency-converter-api
     depends_on:
       - app-database
     ports:
-      - "8888:8080"
+      - 8888:8080
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  watchtower:
+      image: containrrr/watchtower
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+      command: --debug --http-api-update
+      environment:
+        - WATCHTOWER_HTTP_API_TOKEN=mytoken
+        - WATCHTOWER_LABEL_ENABLE=true
+      labels:
+        - "com.centurylinklabs.watchtower.enable=false"
+      ports:
+        - 8081:8080
     
   
   
