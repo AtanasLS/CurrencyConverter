@@ -5,7 +5,7 @@ name: integration
 steps:
     - name: code-analysis
       image: boulundeasv/dotnet-sdk-with-java
-      enviorment:
+      environment:
         SONARSECRET:
           from_secret: SonarQubeSecret
       commands:
