@@ -29,9 +29,9 @@ namespace service
             {
                 return _repository.GetAllHistory();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw new Exception("Could not get all the courses!");
+                throw new Exception("Could not get all the courses!", ex);
             }
         }
 
@@ -58,9 +58,9 @@ namespace service
              {
                 return _repository.CreateHistory(history);
              }
-             catch(Exception)
+             catch(Exception ex)
              {
-                throw new Exception("Could not create the history!");
+                throw new Exception("Could not create the history!", ex);
              }
         }
 
