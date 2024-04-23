@@ -25,6 +25,15 @@ namespace Test
             Assert.That(result.MessageToClient, Is.EqualTo("Successfully got all the histories!"));
 
         }
+        
+        [Test]
+        public void GetAllHistories_Exception()
+        {
+            _historyController = new HistoryController(new HistoryService(null!));
+            // Act & Assert
+            Assert.Throws<Exception>(() => _historyController.GetAllHistories());
+        }
+
         [Test]
         public void CreateHistory()
         {
@@ -43,6 +52,23 @@ namespace Test
             ClassicAssert.IsInstanceOf<ResponseDto>(result);
             ClassicAssert.AreEqual("Succesfully created new entry of history conversion", result.MessageToClient);
         }
+
+        [Test]
+        public void CreateHistory_Exception()
+        {
+            // Arrange
+            var historyDto = new HistoryDto
+            {
+                SourceCurrency = "USD",
+                TargetCurrency = "EUR",
+                ValueCurrency = 100m
+            };
+            _historyController = new HistoryController(new HistoryService(null!));
+
+            // Act & Assert
+            Assert.Throws<Exception>(() => _historyController.CreateHistory(historyDto));
+        }
+
 
         [TearDown]
         public void TearDown()
