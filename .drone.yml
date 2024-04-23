@@ -7,7 +7,7 @@ steps:
       image: boulundeasv/dotnet-sdk-with-java
       enviorment:
         SONARSECRET:
-          from_secret: SONAR_TOKEN
+          from_secret: SonarQubeSecret
       commands:
         - dotnet sonarscanner begin
           dotnet sonarscanner begin 
