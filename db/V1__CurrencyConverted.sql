@@ -1,4 +1,4 @@
-CREATE TABLE "CurrencyConverted"."public".History(
+CREATE TABLE "CurrencyConverted".History(
     id SERIAL PRIMARY KEY,
     date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     source_curr VARCHAR(50),
