@@ -10,7 +10,6 @@ namespace Test
     [TestFixture]
     public class CurrencyConverterApiTests
     {
-        /*
         private HistoryController _historyController;
         [SetUp]
         public void Setup()
@@ -50,6 +49,6 @@ namespace Test
         {
             _historyController.Dispose();
         }
-        */
+        
     }
 }
