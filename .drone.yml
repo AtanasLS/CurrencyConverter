@@ -48,7 +48,7 @@ steps:
         from_secret: DockerUsername
       password:
         from_secret: DockerPassword
-      context: fron-end
+      context: front-end
       dockerfile: front-end/Dockerfile
       repo: atanasls/front-end-currency-final
       tags: 
