@@ -57,7 +57,8 @@ steps:
   - name: trigger update
     image: curlimages/curl
     commands:
-      - "curl --fail -X GET 'http://213.199.36.5:8081/v1/update' -H 'Authorization: Bearer mytoken'" # Must match the token defined in docker-compose.yml
+      - "curl --fail -X GET 'http://213.199.36.5:8081/v1/update' -H 'Authorization: Bearer mytoken'" 
+      # Must match the token defined in docker-compose.yml
       - sleep 10
     depends_on:
       - publish api
@@ -70,7 +71,7 @@ steps:
           -url=jdbc:postgresql://213.199.36.5:5432/postgres
           -user=appuser
           -password=secret
-          -locations=filesystem:./db/
+          -locations=filesystem:./db
     depends_on:
       - trigger update
 

@@ -23,7 +23,7 @@ services:
       - app-database
 
   frontend:
-    image: atanasls/front-end-currency-final 
+    image: atanasls/front-end-currency-final:latest
     depends_on:
       - currency-conversion-api
     ports:
@@ -36,7 +36,7 @@ services:
     depends_on:
       - app-database
     ports:
-      - 8888:8080
+      - 5001:8080
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
 
