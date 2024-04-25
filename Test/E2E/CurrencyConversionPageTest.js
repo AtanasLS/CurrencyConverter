@@ -1,7 +1,7 @@
 import { Selector } from 'testcafe';
 
 fixture('Currency Converter App')
-  .page('http://localhost:4200'); // Replace with your app's URL
+  .page('http://213.199.36.5:4201/'); // Replace with your app's URL
 
   
   const amountInput = Selector('#amount');
