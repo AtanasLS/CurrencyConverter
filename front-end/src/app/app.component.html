@@ -1,7 +1,7 @@
 
 <div class="container">
   <h1 class="app-header">Currency Converter App</h1>
-  <form class="currency-form" (ngSubmit)="convertCurrency()">
+  <form class="currency-form">
       <div class="form-group" class="amount-label">
           <label for="amount">Amount:</label>
           <input type="number" id="amount" name="amount" [(ngModel)]="amount" class="form-control" placeholder="Enter amount">
@@ -18,7 +18,7 @@
       </div>
       <div class="form-group">
           <label for="toCurrency">To Currency:</label>
-          <select id="toCurrency" name="toCurrency"  [(ngModel)]="toCurrency" class="form-control">
+          <select id="toCurrency" name="toCurrency" [(ngModel)]="toCurrency" class="form-control">
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>
             <option value="GBP">GBP</option>

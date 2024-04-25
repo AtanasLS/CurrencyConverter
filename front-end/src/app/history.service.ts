@@ -7,10 +7,12 @@ import { Observable, catchError, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class HistoryService {
-  baseURL = environment.apiUrl;
+  baseURL : string;
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.baseURL = environment.production ? environment.apiUrl : environment.testApiUrl
+   }
 
   createNewHistory(sourceCurrency: string, targetCurrency: string, valueCurrency: number){
     return this.http.post<History>(this.baseURL + 'createCurrency', {
