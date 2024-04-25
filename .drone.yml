@@ -74,4 +74,13 @@ steps:
           -locations=filesystem:./db
     depends_on:
       - trigger update
+  
+  - name: end-to-end tests
+    image: testcafe/testcafe
+    commands:
+      - testcafe chromium:headless Test/E2E/CurrencyConversionPageTest.js
+      - testcafe chromium:headless Test/E2E/AmountInputFIeldTest.js
+      - testcafe chromium:headless Test/E2E/ConvertButtonTest.js
+    depends_on:
+      - update database
 
