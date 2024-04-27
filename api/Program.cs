@@ -8,6 +8,7 @@ if (builder.Environment.IsDevelopment())
 {
     builder.Services.AddNpgsqlDataSource(Utilities.devConnectionString,
          dataSourceBuilder => dataSourceBuilder.EnableParameterLogging());
+         Console.WriteLine(Utilities.devConnectionString);
 }
 
 builder.Services.AddNpgsqlDataSource(Utilities.connectionString);
