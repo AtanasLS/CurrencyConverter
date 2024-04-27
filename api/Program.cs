@@ -6,10 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 if (builder.Environment.IsDevelopment())
 {
-    builder.Services.AddNpgsqlDataSource(builder.Configuration.GetConnectionString("DevDatabasePass")!,
+    builder.Services.AddNpgsqlDataSource(Utilities.devConnectionString,
          dataSourceBuilder => dataSourceBuilder.EnableParameterLogging());
 }
-
 
 builder.Services.AddNpgsqlDataSource(Utilities.connectionString);
 

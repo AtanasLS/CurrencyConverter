@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "hMLoFbzdajyQ9RvxWsHk2wPEtPhEyIwRjmW+oWF0hFRv134ZU411xN0SeLSG33/zTAqf/Vm9Bm4VVf7q2L11uw==",
+  "dgSpecHash": "TYmeY2XW06SpUinUJxyuv+MEyBduopPLI+P/i3Le+QQIM1W+jvsrPVVCJGzPKBpOLwQMJfHcYL3PBRn93PTC9Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Atanas Stoyanov\\OneDrive - Erhvervsakademi Sydvest\\Dokumenter\\GitHub\\DevOps\\CurrencyConverter\\service\\service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Atanas Stoyanov\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
+    "C:\\Users\\Atanas Stoyanov\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
+    "C:\\Users\\Atanas Stoyanov\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Atanas Stoyanov\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Atanas Stoyanov\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Atanas Stoyanov\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\Atanas Stoyanov\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
     "C:\\Users\\Atanas Stoyanov\\.nuget\\packages\\npgsql\\8.0.2\\npgsql.8.0.2.nupkg.sha512"
   ],
   "logs": []
