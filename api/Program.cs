@@ -10,17 +10,8 @@ if (builder.Environment.IsDevelopment())
          dataSourceBuilder => dataSourceBuilder.EnableParameterLogging());
 }
 
-if (builder.Environment.IsProduction())
-{
-    builder.Services.AddNpgsqlDataSource(builder.Configuration.GetConnectionString("ProdDatabasePass")!);
-}
 
 builder.Services.AddNpgsqlDataSource(Utilities.connectionString);
-
-//var frontEndRelativePath = "../front-end/wwwroot";
-
-
-
 
 
 builder.Services.AddSingleton<HistoryService>();
