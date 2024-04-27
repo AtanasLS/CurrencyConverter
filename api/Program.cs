@@ -6,15 +6,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 if (builder.Environment.IsDevelopment())
 {
-    Console.WriteLine(Utilities.devConnectionString);
-    Console.WriteLine(Utilities.connectionString);
-
     builder.Services.AddNpgsqlDataSource(Utilities.devConnectionString,
          dataSourceBuilder => dataSourceBuilder.EnableParameterLogging());
 }
 
+if (builder.Environment.IsProduction())
+{
+    builder.Services.AddNpgsqlDataSource(Utilities.prodConnectionString);
+}
+
 builder.Services.AddNpgsqlDataSource(Utilities.connectionString);
 
+var frontEndRelativePath = "../front-end/wwwroot";
 
 
 

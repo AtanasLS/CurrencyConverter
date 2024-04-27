@@ -85,3 +85,56 @@ steps:
     depends_on:
       - update database
 
+kind: pipeline
+type: docker
+name: deploy
+depends_on:
+  - deliver
+    
+steps: 
+  - name: release api
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: DockerUsername
+      password:
+        from_secret: DockerPassword
+      context: src
+      dockerfile: src/WeatherAPI/Dockerfile
+      repo: atanasls/currency-converter-api
+      tags:
+        - prod
+      
+  - name: release web
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: DockerUsername
+      password:
+        from_secret: DockerPassword
+      context: src
+      dockerfile: src/WeatherFrontend/Dockerfile
+      repo: atanasls/front-end-currency-final
+      tags:
+        - prod
+        
+  - name: trigger update
+    image: curlimages/curl
+    commands:
+      - "curl -X GET 'http://213.199.36.9:8081/v1/update' -H 'Authorization: Bearer mytoken'" # Must match the token defined in docker-compose.yml
+      - sleep 10
+    depends_on:
+      - release api
+      - release web
+
+  - name: update database
+    image: flyway/flyway
+    commands:
+      - flyway migrate
+        -url=jdbc:postgresql://213.199.36.5:5432/postgres
+        -user=appuser
+        -password=secret
+        -locations=filesystem:./db
+    depends_on:
+      - trigger update
+
