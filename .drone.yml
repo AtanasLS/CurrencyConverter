@@ -85,6 +85,8 @@ steps:
     depends_on:
       - update database
 
+---
+
 kind: pipeline
 type: docker
 name: deploy
@@ -100,7 +102,7 @@ steps:
       password:
         from_secret: DockerPassword
       context: src
-      dockerfile: src/WeatherAPI/Dockerfile
+      dockerfile: .
       repo: atanasls/currency-converter-api
       tags:
         - prod
@@ -113,7 +115,7 @@ steps:
       password:
         from_secret: DockerPassword
       context: src
-      dockerfile: src/WeatherFrontend/Dockerfile
+      dockerfile: front-end/Dockerfile
       repo: atanasls/front-end-currency-final
       tags:
         - prod
