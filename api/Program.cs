@@ -6,18 +6,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 if (builder.Environment.IsDevelopment())
 {
-    builder.Services.AddNpgsqlDataSource(Utilities.devConnectionString,
+    builder.Services.AddNpgsqlDataSource(builder.Configuration.GetConnectionString("DevDatabasePass")!,
          dataSourceBuilder => dataSourceBuilder.EnableParameterLogging());
 }
 
 if (builder.Environment.IsProduction())
 {
-    builder.Services.AddNpgsqlDataSource(Utilities.prodConnectionString);
+    builder.Services.AddNpgsqlDataSource(builder.Configuration.GetConnectionString("ProdDatabasePass")!);
 }
 
 builder.Services.AddNpgsqlDataSource(Utilities.connectionString);
 
-var frontEndRelativePath = "../front-end/wwwroot";
+//var frontEndRelativePath = "../front-end/wwwroot";
 
 
 
