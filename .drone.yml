@@ -101,8 +101,8 @@ steps:
         from_secret: DockerUsername
       password:
         from_secret: DockerPassword
-      context: src
-      dockerfile: .
+      context: .
+      dockerfile: Dockerfile
       repo: atanasls/currency-converter-api
       tags:
         - prod
@@ -114,7 +114,7 @@ steps:
         from_secret: DockerUsername
       password:
         from_secret: DockerPassword
-      context: src
+      context: front-end
       dockerfile: front-end/Dockerfile
       repo: atanasls/front-end-currency-final
       tags:
