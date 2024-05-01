@@ -35,6 +35,8 @@ services:
     image: atanasls/currency-converter-api:staging
     depends_on:
       - app-database
+    environment:
+      PGPASS: secret
     ports:
       - 5001:8080
     labels:
